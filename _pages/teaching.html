@@ -5,8 +5,37 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
+{% assign instructor_courses = site.teaching | where: "role", "instructor" | sort: "title" | reverse %}
+{% assign ta_courses = site.teaching | where: "role", "teaching_assistant" | sort: "title" | reverse %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+{% if instructor_courses.size > 0 %}
+<h2 class="archive__subtitle">Instructor</h2>
+
+{% for post in instructor_courses %}
+<article class="archive__item">
+  <h3 class="archive__item-title" style="line-height: 1.5; margin-bottom: 0.25em;">
+    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{% if post.semesters and post.semesters.size > 0 %}
+    <span style="font-size: 0.8em; font-weight: normal; color: #777;">({{ post.semesters | join: ", " }})</span>{% endif %}
+  </h3>
+  <p class="archive__item-excerpt" style="margin-top: 0;">
+    {{ post.excerpt | strip_html | strip_newlines | strip | escape }}
+  </p>
+</article>
 {% endfor %}
+{% endif %}
+
+{% if ta_courses.size > 0 %}
+<h2 class="archive__subtitle">Teaching Assistant</h2>
+
+{% for post in ta_courses %}
+<article class="archive__item">
+  <h3 class="archive__item-title" style="line-height: 1.5; margin-bottom: 0.25em;">
+    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{% if post.semesters and post.semesters.size > 0 %}
+    <span style="font-size: 0.8em; font-weight: normal; color: #777;">({{ post.semesters | join: ", " }})</span>{% endif %}
+  </h3>
+  <p class="archive__item-excerpt" style="margin-top: 0;">
+    {{ post.excerpt | strip_html | strip_newlines | strip | escape }}
+  </p>
+</article>
+{% endfor %}
+{% endif %}

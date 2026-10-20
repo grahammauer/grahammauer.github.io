@@ -9,56 +9,42 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Education
+- **Ph.D. in Applied Mathematics**  
+  University of Colorado Boulder, 2029 (expected)
+- **M.S. in Applied Mathematics**  
+  University of Colorado Boulder, 2026
+- **B.S. in Mathematics and Astronomy**, *summa cum laude*  
+  University of Colorado Boulder, 2024
+  - <small><em>Thesis: Numerical Methods for a PDE System Modeling Tumor Angiogenesis</em></small>
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
+## Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
+## Talks
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
-======
+## Honors and Awards
+* Travel Grant, Rice University, October 2026.
+* "Effects of riation and buoyancy on turbulence in planets and stars", CU Boulder internal grant, 2023 - $1,000.
+  
+## Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Leadership and Service
+* Graduate Student Representative, University of Colorado Boulder, FA2026--SP2027
+* Graduate Student Mentor, University of Colorado Boulder, 2025--Present
+* Organizer for [Math For All](https://sites.google.com/view/mathforallnola/in-person-locations/boulder-co) Conference, 2025/2026
+* Poster Workshops for Math Undergraduates at Front Range Universities, 2022-2025
+* Virtual Poster Workshop for Math For All, March 2024
+
+## Technical Skills
+* Languages: C++, Python, MATLAB, Julia, LaTeX
+* Tools: GitHub, Linux, Slurm
